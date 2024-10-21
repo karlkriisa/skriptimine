@@ -23,3 +23,11 @@ git remote add skriptimine git@github.com:karlkriisa/skriptimine.git
 
 f)git remote kontroll
 git remove -v
+
+põhikasutamine:
+a) pane fail jälgimisele
+git add failinimi
+b) commit sõnumiga
+git commit -m 'sõnum'
+c) lükka uuendused reposse
+git push -uf nimi main
