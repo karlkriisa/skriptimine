@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Väljastab kuupäeva ja ajaga seotud info
+echo "Today is $(date +"%A, %B %d, %Y")"
+echo "Time is $(date +"%R")"
+echo -e "\nCalendar of $(date +"%B %Y")"
+cal | tail -n 7
