@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # Väljastab tervituse käivitaja kasutajanimega
-echo -e "Tere, $(whoami)\n!"
+nimi="$(whoami)"
+echo -e "Tere, ${nimi^}\n!"
