@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# Väljastab tervituse käivitaja kasutajanimega
+# Väljastab tervituse käivitaja kasutajanimega, millel suur algustäht
 nimi="$(whoami)"
 echo -e "Tere, ${nimi^}\n!"
