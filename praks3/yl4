@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Küsib reisijate ja kohtade arvu ning väljastab
+# mitu bussi tuleb kasutada ning mitu jääb maha
+read -p "Sisesta reisijate arv grupis: " REISIJAD
+read -p "Sisesta kohtade arv ühes bussis: " KOHAD
+
+BUSSID=$(($REISIJAD/$KOHAD))
+MAHAJAANUD=$(($REISIJAD%$KOHAD))
+
+echo "$REISIJAD inimese transportimiseks saab kasutada $BUSSID $KOHAD-kohalist bussi ning $MAHAJAANUD jäävad reisist ilma."
