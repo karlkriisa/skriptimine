@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Kasutab käsureal sisestatud parameetreid,
+# et määrata OS-i valikut
+if [ $1 -eq 1 ] ; then
+    echo "You Pick up Unix (Sun Os)"
+else 
+    if [ $1 -eq 2 ] ; then
+        echo "You Pick up Linux (Red Hat)"
+    else
+        echo "What you don't like Unix/Linux OS."
+    fi
+fi
+
