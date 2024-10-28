@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Küsib kasutajalt arvu ning väljastab,
+# kas see on paaris või paaritu
+read -p "Sisesta suvaline täisarv: " ARV
+
+if [ $(($ARV % 2)) -eq 0 ]
+then
+    echo "$ARV on paaris"
+else
+    echo "$ARV on paaritu"
+fi
