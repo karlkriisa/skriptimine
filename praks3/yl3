@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Küsib kasutajalt ainepunktide ja nädalate arvu,
+# teeb arvutuse ja väljastab tulemuse
+read -p "Sisestage ainepunktide arv: " AINEPUNKTID
+read -p "Sisestage nädalate arv: " NADALAD
+
+ajakulu=$(bc <<< "scale=1;$AINEPUNKTID*26/$NADALAD")
+echo $ajakulu
