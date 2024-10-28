@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Kasutab kasutaja antud parameetrit ning
+# määrab, kas see on paaris või paaritu
+
+if [ $# -ne 1 ]
+then
+    echo "Kaivita see skript koos arvuga mille paarsus soovid kontrollida. Näiteks: ./paarsus 3"
+else
+    if [ $(($1 % 2)) -eq 0 ]
+    then
+        echo "$1 on paaris"
+    else
+        echo "$1 on paaritu"
+    fi
+fi
+
+
+
