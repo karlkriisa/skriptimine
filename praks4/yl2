@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Küsib reisijate ja kohtade arvu ning
+# väljastab mitu bussi on kokku vaja
+read -p "Sisesta reisijate arv grupis: " REISIJAD
+read -p "Sisesta kohtade arv ühes bussis: " KOHAD
+
+BUSSID=$(($REISIJAD/$KOHAD))
+MAHAJAANUD=$(($REISIJAD%$KOHAD))
+
+if [ $MAHAJAANUD -gt 0 ]
+then
+    echo "Kokku on vaja $(($BUSSID+1)) bussi."
+else
+    echo "Kokku on vaja $BUSSID bussi."
+fi
