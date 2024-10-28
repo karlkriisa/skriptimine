@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Küsib kasutaja ees- ja perenime ning
+# väljastab tervituse kahe muutujaga
+# (eraldi tehtud kahe eesnimega kasutajale)
+read -p "Sisesta oma ees- ja perenimi: " nimed
+
+eesnimi=$(echo "$nimed" | cut -f1 -d " " && echo $nimed | cut -f2 -d " ")
+perenimi=$(echo "$nimed" | cut -f3 -d " ")
+
+echo "Tere tulemast," $eesnimi $perenimi
