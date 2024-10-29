@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Küsib kasutajalt kuu numbrit ning
+# väljastab mis aastaajaga on tegemist
+read -p "Sisesta kuu number: " kuu
+
+if [ $kuu -eq 1 -o $kuu -eq 2 -o $kuu -eq 12 ];then
+    printf "Praegu on talv\n"
+elif [ $kuu -ge 3 -a $kuu -le 5 ];then
+    printf "Praegu on kevad\n"
+elif [ $kuu -ge 6 -a $kuu -le 8 ];then
+    printf "Praegu on suvi\n"
+elif [ $kuu -ge 9 -a $kuu -le 11 ];then
+    printf "Praegu on sügis\n"
+else
+    printf "Antud numbriga kuud pole olemas\n"
+fi
