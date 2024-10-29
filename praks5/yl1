@@ -4,14 +4,14 @@
 # vanuse kohta kirjelduse
 read -p "Sisesta (oma) vanus: " vanus
 
-if [ $vanus -lt 12 ];then
+if [ $vanus -gt 0 -a $vanus -lt 11 ];then
     printf "Oled laps\n"
+elif [ $vanus -ge 11 -a $vanus -lt 18 ];then
+    printf "Oled nooruk\n"
+elif [ $vanus -ge 18 -a $vanus -lt 63 ];then
+    printf "Oled täiskasvanu\n"
+elif [ $vanus -ge 63 ];then
+    printf "Oled seenjor\n"
 else
-    if [ $vanus -lt 19 ];then
-        printf "Oled nooruk\n"
-    else
-        if [ $vanus -ge 19 ];then
-            printf "Oled seenjor\n"
-        fi
-    fi
+    printf "Vigane sisend\n"
 fi
