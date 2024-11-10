@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Arvutab kasutaja sisestatud arvuga
+# arvu numbrite summa ja väljastab selle
+# koos selgitava tekstiga
+read -p "Sisesta suvaline täisarv: " arv
+summa=0
+
+while [ $arv -ne 0 ]
+do
+    jaak=$(($arv % 10))
+    summa=$(($summa + $jaak))
+    arv=$(($arv / 10))
+done
+
+printf "Arvu $arv numbrite summa on $summa\n"
