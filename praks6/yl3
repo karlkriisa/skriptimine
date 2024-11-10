@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Küsib kasutajalt kuu numbrit ning
+# väljastab selle kuu nimetuse
+printf 'Sisesta kuu number: '
+read kuu
+
+printf 'See on '
+case $kuu in
+    1)
+        printf 'jaanuar\n'
+        ;;
+    2)
+        printf 'veebruar\n'
+        ;;
+    3)
+        printf 'märts\n'
+        ;;
+    4)
+        printf 'aprill\n'
+        ;;
+    5)
+        printf 'mai\n'
+        ;;
+    6)
+        printf 'juuni\n'
+        ;;
+    7)
+        printf 'juuli\n'
+        ;;
+    8)
+        printf 'august\n'
+        ;;
+    9)
+        printf 'september\n'
+        ;;
+    10)
+        printf 'oktoober\n'
+        ;;
+    11)
+        printf 'november\n'
+        ;;
+    12)
+        printf 'detsember\n'
+        ;;
+    *)
+        printf 'vigane sisend, sisesta number 1-12\n'
+        ;;
+esac
