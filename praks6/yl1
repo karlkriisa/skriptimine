@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Arvutab 10 esimese paarisarvude summa
+summa=0
+for (( arv=1; arv<11; arv++ ))
+do
+    if [ $(($arv % 2)) -eq 0 ];then
+        summa=$((summa + $arv))
+    fi
+done
+
+printf "Arvude vahemikus 1 kuni 10 (kaasaarvatud) paarisarvude summa on: $summa\n"
